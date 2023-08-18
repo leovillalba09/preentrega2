@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../images/fondo4.jpg);
+    
+}
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: 
+    "logo        logo          logo        logo "
+    "productos   quienes-somos informacion contacto";
+
+    gap: 1rem;
+}
+
+.logo{
+    grid-area: logo;
+background-image: url(../images/logoultimo3.jpg);
+background-size: cover;
+background-position: center;
+
+}
+
+.productos{
+    grid-area: productos;
+    background-image: url(../images/productos3.jpg);
+  background-size: cover;
+  background-position: center;
+
+  
+}
+
+.quienes-somos{
+    grid-area: quienes somos;
+background-image: url(../images/quienesomoss.jpg);
+background-size: cover;
+background-position: center;
+}
+
+.informacion{
+    grid-area: informacion;
+background-image: url(../images/informacion.png);
+background-size: cover;
+background-position: center;
+}
+
+.contacto{
+    grid-area: contacto;
+background-image: url(../images/contacto.png);
+background-size: cover;
+background-position: center;
+
+
+}
+
+.tarjetita{
+    background-color: aquamarine;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tarjetitas{
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+    
+
+}
+
+@media screen and (max-width:480px) {
+    
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr  ;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "logo"
+    "logo"
+    "productos"
+    "quienes-somos"
+    "informacion"
+    "contacto"
+    ;
+   
+}
+}
+@media screen and (max-width:768px) {
+    
+    .contenedor{
+        display: grid;
+        grid-template-columns: 1fr  ;
+        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "logo"
+        "logo"
+        "productos"
+        "quienes-somos"
+        "informacion"
+        "contacto"
+        ;
+
+       .productos{
+        background-image: url(../images/prodrespon.jpg);
+        background-size: cover;
+       }
+
+        .informacion{
+         background-image: url(../images/inforespon.jpg);
+         background-size: cover;
+        }
+
+        .quienes-somos{
+            background-image: url(../images/quienesomosrespon.jpg);
+            background-size: cover;
+        }
+
+        .contacto{
+            background-image: url(../images/contactorespon.jpg);
+            background-size: cover;
+        }
+
+      
+       
+    }
+    }
+@media screen and (max-width:480px){
+    .tarjetitas{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:768px){
+    .tarjetitas{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
